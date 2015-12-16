@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" id="modernizrcom" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>{{ meta.title }}</title>
+  <meta name="author" content="Micz Flor" >
+  
+  <meta name="description" content="{{ meta.description }}">
+  
+  <meta name="keywords" content="" />
+
+  <!-- RSS & Pingback -->
+  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{{ meta.rsspingback }}">
+
+  <meta property="og:title"       content="{{ meta.title }}"/>
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="{{ meta.src }}"/>
+  <meta property="og:site_name"   content="{{ meta.site_name }}"/>
+  <meta property="og:description" content="{{ meta.description }}"/>
+  <meta property="og:image"       content="{{ meta.site_img }}"/>
+
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/img/touch-icon.png">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!--script src="assets/js/jquery2.1.3.min.js"></script-->
+  
+</head>
+
+<body class="longform" name="top">
+
+{{#meta.share.facebook}}
+  <div id='fb-root'></div>
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+{{/meta.share.facebook}}
+
+<div id="loader-wrapper" >
+  
+  <div id="loader-image" data-src="{{ meta.site_img }}"></div>
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </div>
+
+  <!-- main audio -->
+  <audio id="master-audio" preload="none" autoplay="autoplay" loop="loop"></audio>
+  <a href="#" class="mute">Mute</a>
+    
+
+{{>snippets/navigation}}
+
+<article>
+  {{# items }}
+    {{# videobackground }}
+      {{> snippets/videobackground }}
+    {{/ videobackground }}
+    {{# textcentered }}
+      {{> snippets/textcentered }}
+    {{/ textcentered }}
+    {{# imagebackground }}
+      {{> snippets/imagebackground }}
+    {{/ imagebackground }}
+    {{# videofullpage }}
+      {{> snippets/videofullpage }}
+    {{/ videofullpage }}
+    {{# slideshowhorizontal }}
+      {{> snippets/slideshowhorizontal }}
+    {{/ slideshowhorizontal }}
+    {{# slideshowvertical }}
+      {{> snippets/slideshowvertical }}
+    {{/ slideshowvertical }}
+    {{# imageparallax }}
+      {{> snippets/imageparallax }}
+    {{/ imageparallax }}
+  {{/ items }}
+</article>
+
+<div class="social-buttons credits">
+  {{>snippets/subsocialbuttons}}
+</div>	
+
+<script src="assets/js/all.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!-- start snippet "SlideShowVertical" -->
+{{# images }}
+<section class="part slideshow " name="story".$storycounter."">";
+  <div class="bg-image"
+    data-src="{{ srcmain }}"
+    data-srcMedium="{{ srcmedium }}"
+    data-srcPhone="{{ srcphone }}"
+  >
+    <div class="caption">{{{ title }}}
+      <span>{{{ credits }}}</span>
+    </div>
+  </div>
+</section>
+{{/ images }}
+<!-- end snippet "SlideShowVertical" -->

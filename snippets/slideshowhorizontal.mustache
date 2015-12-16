@@ -1,0 +1,31 @@
+<!-- start snippet "SlideShowHorizontal" -->
+<script>
+  if(galleryLinksContainer===undefined){
+    var galleryLinksContainer = [];
+  }
+</script>
+
+<section class="part slideshow-horizontal snap " name="story".$storycounter."">
+  <div class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
+    <div class="slides"></div>
+    <a class="prev">&lsaquo;</a>
+    <a class="next">&rsaquo;</a>
+    <div class="slide-caption"></div>
+  </div>
+</section>
+
+         
+<script>
+  var galleryLinks = [];
+{{# images }}
+  galleryLinks.push({
+    title: '{{ title }}',
+    photographer: '{{ credits }}',
+    href: '{{ src }}',
+    original_id: 'imgID{{ imgid }}',
+    type: '{{ type }}'
+  });
+{{/ images }}
+  galleryLinksContainer.push(galleryLinks);
+</script>
+<!-- end snippet "SlideShowHorizontal" -->

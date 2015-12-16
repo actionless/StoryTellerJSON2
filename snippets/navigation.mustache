@@ -1,0 +1,66 @@
+<div class="menu_open">
+  <div class="sticks_wrapper">
+    <div class="stick -first" id="stick1"></div>
+    <div class="stick -second" id="stick2"></div>
+    <div class="stick -third" id="stick3"></div>
+  </div>
+</div>
+
+<div class="nav">
+
+  <nav>
+    <ul>
+    {{#items}}
+    {{#navlevel}}
+
+    {{^navlevel.start-first-level}}
+    {{#navlevel.first-level}}
+        </ul>
+      </li><!-- / .first-level -->
+    {{/navlevel.first-level}}
+    {{/navlevel.start-first-level}}
+    
+    {{#navlevel.child}}
+          <li class="child">
+            <a href="#story".$storycounter."" data-articleNumber="story".$storycounter."" title="".$navtitle."">
+              {{#navtitle}}{{navtitle}}{{/navtitle}}
+              {{^navtitle}}{{title}}{{/navtitle}}
+            </a>
+          </li><!-- / .child -->
+    {{/navlevel.child}}
+
+    {{#navlevel.first-level}}
+      <li class="first-level">
+        <a href="#story".$storycounter."" data-articleNumber="story".$storycounter."" title="".$navtitle."">
+          <!--<span>".$counterfirstlevel."</span> -->
+          <span> - </span> 
+          <p>
+              {{#navtitle}}{{navtitle}}{{/navtitle}}
+              {{^navtitle}}{{title}}{{/navtitle}}
+          </p>
+        </a>
+        
+        <ul>
+          <figure>
+            <a href="#story".$storycounter."" title="Four Season Attraction">
+              <img src="{{navthumb}}" />
+            </a>
+          </figure>
+    {{/navlevel.first-level}}
+
+    {{#navlevel.end-first-level}}
+        </ul>
+      </li><!-- / .first-level -->
+    {{/navlevel.end-first-level}}
+
+    {{/navlevel}}
+    {{/items}}
+    </ul>
+  </nav>
+
+
+  <div class="social-buttons">
+  {{>snippets/subsocialbuttons}}
+  </div>
+  
+</div><!-- / .nav -->
