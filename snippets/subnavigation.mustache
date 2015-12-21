@@ -1,0 +1,42 @@
+{{#navlevel}}
+
+  {{^navlevel.start-first-level}}
+  {{#navlevel.first-level}}
+      </ul>
+    </li><!-- / .first-level -->
+  {{/navlevel.first-level}}
+  {{/navlevel.start-first-level}}
+
+  {{#navlevel.child}}
+    <li class="child">
+      <a href="#{{id}}" data-articleNumber="{{id}}" title="{{#navtitle}}{{navtitle}}{{/navtitle}}{{^navtitle}}{{title}}{{/navtitle}}">
+        {{#navtitle}}{{navtitle}}{{/navtitle}}
+        {{^navtitle}}{{title}}{{/navtitle}}
+      </a>
+    </li><!-- / .child -->
+  {{/navlevel.child}}
+
+  {{#navlevel.first-level}}
+    <li class="first-level">
+      <a href="#{{id}}" data-articleNumber="{{id}}" title="{{#navtitle}}{{navtitle}}{{/navtitle}}{{^navtitle}}{{title}}{{/navtitle}}">
+        <span>{{.}}</span>
+        <p>
+            {{#navtitle}}{{navtitle}}{{/navtitle}}
+            {{^navtitle}}{{title}}{{/navtitle}}
+        </p>
+      </a>
+      
+      <ul>
+        <figure>
+          <a href="#{{id}}" title="{{#navtitle}}{{navtitle}}{{/navtitle}}{{^navtitle}}{{title}}{{/navtitle}}">
+            <img src="{{navthumb}}" />
+          </a>
+        </figure>
+  {{/navlevel.first-level}}
+
+  {{#navlevel.end-first-level}}
+      </ul>
+    </li><!-- / .first-level -->
+  {{/navlevel.end-first-level}}
+
+{{/navlevel}}
