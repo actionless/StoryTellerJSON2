@@ -11,3 +11,10 @@ virtualenv env
 pip install -r requirements.txt
 ./render.py ; xdg-open ./output/index.html
 ```
+
+Install dependencies for viewing docs:
+
+```
+cd ./docs/
+bower install
+```
