@@ -52,8 +52,11 @@
                 "format": { "fullpage": "true" },
                 "title": "Four Season Attraction",
                 "subtitle": "Chapter #1",
-                "navigation": {"first-level": "1", "id": "4season"},
-                "navthumb": "http:\/\/storyteller-dev.lab.sourcefabric.org\/images\/cache\/215x115\/crop\/images%7Ccms-image-000000525.jpg",
+                "navigation": {
+                    "first-level": "1",
+                    "thumb": "http:\/\/storyteller-dev.lab.sourcefabric.org\/images\/cache\/215x115\/crop\/images%7Ccms-image-000000525.jpg",
+                    "id": "4season"
+                },
                 "text": "<p>From winter religious ceremony (pictured here:\u00a0Bishop of Valjevo on Epiphany celebration), to hot summer days swimming and cooling off (water temperature is around 16C and deep shade of the gorge and high trees keep the climate refreshing even in the hottest days with temperatures close to 40C), to fly-fishing, hiking &amp; trekking, to speleology, mushroom-hunting, or simply picnicking in the tens of different locations alongside the river - Gradac is attractive all year long.<\/p>\r\n                  <p>Lorem ipsum dolor sit amet, est diceret incorrupte ad, ei usu eruditi sadipscing, malis delenit fuisset vis cu. Per iudico bonorum aliquando ut, et oratio laudem vel, qui no fugit explicari. Nobis solet nam an, paulo aperiam fabulas mei at, ut rebum urbanitas eum. An vim omnesque deleniti, ei euismod nominavi percipit nam, in sit appareat luptatum principes. Ea his dicit adolescens, prima eirmod volutpat usu ea, mel ne facer ignota.<\/p>\r\n                  <p>Et nibh tota illum cum, omnis ocurreret mei ex, noster liberavisse his at. Id quo soluta vivendum, ei rebum tamquam nec. Mea cu inani exerci aliquando, duo modo expetenda tincidunt ex, per ferri consetetur suscipiantur ad. Facete facilis qualisque mei ea, vel ea purto ancillae consectetuer. Qui te iuvaret omnesque.<\/p>\r\n                  <p>In elitr corrumpit quo. Ad nam dissentias scripserit, at quidam audiam ius. His eu affert repudiare. Sea ex saperet indoctum, ad liber choro eos. Usu ne scaevola adolescens dissentiet. An eos diam definitionem.<\/p>",
                 "image": {
                     "srcmain": "http:\/\/storyteller-dev.lab.sourcefabric.org\/images\/cache\/1920x1200\/crop\/images%7Ccms-image-000000525.jpg",
@@ -161,8 +164,11 @@
                 "format": { "fullpage": "true" },
                 "title": "Man-made structures",
                 "subtitle": "Chapter #2",
-                "navigation": {"first-level": "2", "id": "manmade"},
-                "navthumb": "http:\/\/storyteller-dev.lab.sourcefabric.org\/images\/cache\/215x115\/crop\/images%7Ccms-image-000000457.JPG",
+                "navigation": {
+                    "first-level": "2",
+                    "thumb": "http:\/\/storyteller-dev.lab.sourcefabric.org\/images\/cache\/215x115\/crop\/images%7Ccms-image-000000457.JPG",
+                    "id": "manmade"
+                },
                 "text": "<p>Nature is beautiful, but man-made structures are as well. The way railway curves through the gorge, elegant bridges, dark tunnels... it gives an added value to the whole area, but also helps people get to the distant parts of the gorge more easily.<\/p>\r\n                  <p>Not to forget dams, small and big - for hundreds of years people here were making knitted dams to divide streams of water (called 'jaz') which is then used to run numerous watermills; in the last hundred years several concrete dams were built for different purposes - for example, Deguri\u0107 dam was built in 1896 to make electricity which was used for street lights in Valjevo; the big dam at the end of the gorge was built in 70s, and there are some more that have an anti-erosive function.<\/p>",
                 "video": {
                     "mp4": "http:\/\/storyteller-dev.lab.sourcefabric.org\/attachment\/251\/vodopad03.mp4",
@@ -254,8 +260,11 @@
                 "format": { "fullpage": "true" },
                 "title": "Nature & wildlife",
                 "subtitle": "Chapter #3",
-                "navigation": {"first-level": "3", "id": "wildlife"},
-                "navthumb": "http:\/\/storyteller-dev.lab.sourcefabric.org\/images\/cache\/215x115\/crop\/images%7Ccms-image-000000455.jpg",
+                "navigation": {
+                    "first-level": "3",
+                    "thumb": "http:\/\/storyteller-dev.lab.sourcefabric.org\/images\/cache\/215x115\/crop\/images%7Ccms-image-000000455.jpg",
+                    "id": "wildlife"
+                },
                 "text": "<p>There are around 70 caves discovered in the gorge. The biggest one is Deguri\u0107ka cave, but others are interesting as well - either for their bat colonies, pre-historic artifacts, or just the beauty of the cave jewelry.<\/p>\r\n                  <p>Wildlife is diverse - otter, lynx, viper, brown trout are just the most significant representatives.\u00a0<\/p>",
                 "video": {
                     "mp4": "\/attachment\/253\/vodopad01.mp4",
