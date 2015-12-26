@@ -1,0 +1,387 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Standing instance",
+    "type": "object",
+    "required": ["meta", "items"],
+    "definitions": {
+        "format": {
+            "type": "object",
+            "properties": {
+                "fullpage": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "navigation": {
+            "type": "object",
+            "required": ["id"],
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "thumb": {
+                    "type": "string"
+                },
+                "first-level": {
+                    "type": "string"
+                },
+                "child": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "title": {
+            "type": "string"
+        },
+        "subtitle": {
+            "type": "string"
+        },
+        "intro": {
+            "type": "string"
+        },
+        "text": {
+            "type": "string"
+        },
+        "credits": {
+            "type": "string"
+        },
+        "image": {
+            "type": "object",
+            "properties": {
+                "srcmain": {
+                    "type": "string"
+                },
+                "srcmedium": {
+                    "type": "string"
+                },
+                "srcphone": {
+                    "type": "string"
+                }
+            }
+        },
+        "image_loading": {
+            "type": "object",
+            "properties": {
+                "loading": {
+                    "type": "string"
+                }
+            }
+        },
+        "video": {
+            "type": "object",
+            "properties": {
+                "mp4": {
+                    "type": "string"
+                },
+                "webm": {
+                    "type": "string"
+                }
+            }
+        },
+        "image_vertical": {
+            "allOf": [{
+                "$ref": "#/definitions/image"
+            }, {
+                "properties": {
+                    "title": {
+                        "$ref": "#/definitions/title"
+                    },
+                    "credits": {
+                        "$ref": "#/definitions/credits"
+                    }
+                }
+            }]
+        },
+        "images_vertical": {
+            "type": "array",
+            "items": [{
+                "$ref": "#/definitions/image_vertical"
+            }]
+        },
+        "images_horizontal": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "src": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "$ref": "#/definitions/title"
+                    },
+                    "credits": {
+                        "$ref": "#/definitions/credits"
+                    }
+                }
+            }
+        },
+        "snippets": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "align": {
+                        "type": "string",
+                        "enum": ["right", "left"]
+                    },
+                    "src": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "$ref": "#/definitions/title"
+                    },
+                    "text": {
+                        "$ref": "#/definitions/text"
+                    },
+                    "credits": {
+                        "$ref": "#/definitions/credits"
+                    }
+                }
+            }
+        }
+    },
+    "properties": {
+        "meta": {
+            "type": "object",
+            "description": "Page metadata",
+            "properties": {
+                "src": {
+                    "type": "string",
+                    "description": "Page URL"
+                },
+                "site_name": {
+                    "type": "string",
+                    "description": "Site name"
+                },
+                "site_img": {
+                    "type": "string",
+                    "description": "Site image URL"
+                },
+                "title": {
+                    "type": "string",
+                    "description": "Page title"
+                },
+                "subtitle": {
+                    "type": "string",
+                    "description": "Subtitle"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Page description"
+                },
+                "author": {
+                    "type": "string",
+                    "description": "Page author"
+                },
+                "share": {
+                    "type": "object",
+                    "description": "Social share buttons (don't add the property or leave it blank if don't need it)",
+                    "properties": {
+                        "facebook": {
+                            "type": "boolean"
+                        },
+                        "twitter": {
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        },
+        "items": {
+            "anyOf": [{
+                "type": "object",
+                "properties": {
+                    "textcentered": {
+                        "type": "object",
+                        "properties": {
+                            "navigation": {
+                                "$ref": "#/definitions/navigation"
+                            },
+                            "format": {
+                                "$ref": "#/definitions/format"
+                            },
+                            "title": {
+                                "$ref": "#/definitions/title"
+                            },
+                            "subtitle": {
+                                "$ref": "#/definitions/subtitle"
+                            },
+                            "intro": {
+                                "$ref": "#/definitions/intro"
+                            },
+                            "text": {
+                                "$ref": "#/definitions/text"
+                            },
+                            "snippets": {
+                                "$ref": "#/definitions/snippets"
+                            }
+                        }
+                    }
+                }
+            }, {
+                "type": "object",
+                "properties": {
+                    "imagebackground": {
+                        "type": "object",
+                        "properties": {
+                            "navigation": {
+                                "$ref": "#/definitions/navigation"
+                            },
+                            "format": {
+                                "$ref": "#/definitions/format"
+                            },
+                            "title": {
+                                "$ref": "#/definitions/title"
+                            },
+                            "subtitle": {
+                                "$ref": "#/definitions/subtitle"
+                            },
+                            "intro": {
+                                "$ref": "#/definitions/intro"
+                            },
+                            "text": {
+                                "$ref": "#/definitions/text"
+                            },
+                            "image": {
+                                "$ref": "#/definitions/image"
+                            }
+                        }
+                    }
+                }
+            }, {
+                "type": "object",
+                "properties": {
+                    "imageparallax": {
+                        "type": "object",
+                        "properties": {
+                            "navigation": {
+                                "$ref": "#/definitions/navigation"
+                            },
+                            "format": {
+                                "$ref": "#/definitions/format"
+                            },
+                            "title": {
+                                "$ref": "#/definitions/title"
+                            },
+                            "subtitle": {
+                                "$ref": "#/definitions/subtitle"
+                            },
+                            "intro": {
+                                "$ref": "#/definitions/intro"
+                            },
+                            "text": {
+                                "$ref": "#/definitions/text"
+                            },
+                            "image": {
+                                "$ref": "#/definitions/image"
+                            }
+                        }
+                    }
+                }
+            }, {
+                "type": "object",
+                "properties": {
+                    "slideshowhorizontal": {
+                        "type": "object",
+                        "properties": {
+                            "navigation": {
+                                "$ref": "#/definitions/navigation"
+                            },
+                            "format": {
+                                "$ref": "#/definitions/format"
+                            },
+                            "title": {
+                                "$ref": "#/definitions/title"
+                            },
+                            "images": {
+                                "$ref": "#/definitions/images_horizontal"
+                            }
+                        }
+                    }
+                }
+            }, {
+                "type": "object",
+                "properties": {
+                    "slideshowvertical": {
+                        "type": "object",
+                        "properties": {
+                            "navigation": {
+                                "$ref": "#/definitions/navigation"
+                            },
+                            "format": {
+                                "$ref": "#/definitions/format"
+                            },
+                            "title": {
+                                "$ref": "#/definitions/title"
+                            },
+                            "images": {
+                                "$ref": "#/definitions/images_vertical"
+                            }
+                        }
+                    }
+                }
+            }, {
+                "type": "object",
+                "properties": {
+                    "videobackground": {
+                        "type": "object",
+                        "properties": {
+                            "navigation": {
+                                "$ref": "#/definitions/navigation"
+                            },
+                            "format": {
+                                "$ref": "#/definitions/format"
+                            },
+                            "title": {
+                                "$ref": "#/definitions/title"
+                            },
+                            "subtitle": {
+                                "$ref": "#/definitions/subtitle"
+                            },
+                            "image": {
+                                "$ref": "#/definitions/image_loading"
+                            },
+                            "video": {
+                                "$ref": "#/definitions/video"
+                            }
+                        }
+                    }
+                }
+            }, {
+                "type": "object",
+                "properties": {
+                    "videofullpage": {
+                        "type": "object",
+                        "properties": {
+                            "navigation": {
+                                "$ref": "#/definitions/navigation"
+                            },
+                            "format": {
+                                "$ref": "#/definitions/format"
+                            },
+                            "title": {
+                                "$ref": "#/definitions/title"
+                            },
+                            "subtitle": {
+                                "$ref": "#/definitions/subtitle"
+                            },
+                            "text": {
+                                "$ref": "#/definitions/text"
+                            },
+                            "image": {
+                                "$ref": "#/definitions/image_loading"
+                            },
+                            "video": {
+                                "$ref": "#/definitions/video"
+                            }
+                        }
+                    }
+                }
+            }]
+        }
+    },
+    "additionalProperties": false
+}

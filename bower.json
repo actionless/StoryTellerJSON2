@@ -1,0 +1,21 @@
+{
+  "name": "docs",
+  "homepage": "https://github.com/actionless/StoryTellerJSON2",
+  "authors": [
+    "actionless <actionless.loveless@gmail.com>"
+  ],
+  "description": "documentation for schema of storyteller json",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "GPL3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "docson": "*"
+  }
+}
