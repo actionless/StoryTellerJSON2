@@ -1,12 +1,5 @@
 {{#navigation}}
 
-  {{^navigation.start-first-level}}
-  {{#navigation.first-level}}
-      </ul>
-    </li><!-- / .first-level -->
-  {{/navigation.first-level}}
-  {{/navigation.start-first-level}}
-
   {{#navigation.child}}
     <li class="child">
       <a href="#{{id}}" data-articleNumber="{{id}}" title="{{#navtitle}}{{navtitle}}{{/navtitle}}{{^navtitle}}{{title}}{{/navtitle}}">
@@ -34,9 +27,9 @@
         </figure>
   {{/navigation.first-level}}
 
-  {{#navigation.end-first-level}}
+  {{#navigation.close-first-level}}
       </ul>
     </li><!-- / .first-level -->
-  {{/navigation.end-first-level}}
+  {{/navigation.close-first-level}}
 
 {{/navigation}}
