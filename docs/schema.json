@@ -191,8 +191,10 @@
             }
         },
         "items": {
+            "description": "Article sections",
             "anyOf": [{
                 "type": "object",
+                "description": "Normal text section",
                 "properties": {
                     "textcentered": {
                         "type": "object",
@@ -223,6 +225,7 @@
                 }
             }, {
                 "type": "object",
+                "description": "Text on image background",
                 "properties": {
                     "imagebackground": {
                         "type": "object",
@@ -253,6 +256,7 @@
                 }
             }, {
                 "type": "object",
+                "description": "Image which is scrolling with the parallax effect",
                 "properties": {
                     "imageparallax": {
                         "type": "object",
@@ -283,6 +287,7 @@
                 }
             }, {
                 "type": "object",
+                "description": "Horizontal slideshow",
                 "properties": {
                     "slideshowhorizontal": {
                         "type": "object",
@@ -304,6 +309,7 @@
                 }
             }, {
                 "type": "object",
+                "description": "Vertical slideshow",
                 "properties": {
                     "slideshowvertical": {
                         "type": "object",
@@ -325,6 +331,7 @@
                 }
             }, {
                 "type": "object",
+                "description": "Text on video background",
                 "properties": {
                     "videobackground": {
                         "type": "object",
@@ -346,12 +353,16 @@
                             },
                             "video": {
                                 "$ref": "#/definitions/video"
+                            },
+                            "text": {
+                                "$ref": "#/definitions/text"
                             }
                         }
                     }
                 }
             }, {
                 "type": "object",
+                "description": "Full-page video",
                 "properties": {
                     "videofullpage": {
                         "type": "object",
