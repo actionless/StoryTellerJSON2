@@ -25,7 +25,7 @@
                 "first-level": {
                     "type": "string"
                 },
-                "child": {
+                "close-first-level": {
                     "type": "boolean"
                 }
             }

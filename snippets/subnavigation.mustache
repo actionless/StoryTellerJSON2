@@ -1,13 +1,13 @@
 {{#navigation}}
 
-  {{#navigation.child}}
+  {{^navigation.first-level}}
     <li class="child">
       <a href="#{{id}}" data-articleNumber="{{id}}" title="{{#navtitle}}{{navtitle}}{{/navtitle}}{{^navtitle}}{{title}}{{/navtitle}}">
         {{#navtitle}}{{navtitle}}{{/navtitle}}
         {{^navtitle}}{{title}}{{/navtitle}}
       </a>
     </li><!-- / .child -->
-  {{/navigation.child}}
+  {{/navigation.first-level}}
 
   {{#navigation.first-level}}
     <li class="first-level">
