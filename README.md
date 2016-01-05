@@ -1,6 +1,8 @@
 ﻿Storyteller mustache template
 =========
 
+###[Demo and docs](http://actionless.github.io/StoryTellerJSON2/)
+
 You can render this template with any of [mustache](https://mustache.github.io/ "") libraries.
 
 Example using [pystache](https://github.com/defunkt/pystache "") one:
